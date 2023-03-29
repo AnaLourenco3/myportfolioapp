@@ -1,0 +1,100 @@
+.contact {
+    height: 100vh;
+    background-color: #0f363d;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+  .contact__title {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+
+$color-border: #daa69f;
+
+@keyframes type-writer {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+    border-right: 0.15em solid $color-border;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-right: 0.15em solid $color-border;
+  }
+  10% {
+    border-right: 0.15em solid transparent;
+  }
+  20% {
+    border-right: 0.15em solid $color-border;
+  }
+  30% {
+    border-right: 0.15em solid transparent;
+  }
+  40% {
+    border-right: 0.15em solid $color-border;
+  }
+  50% {
+    border-right: 0.15em solid transparent;
+  }
+  60% {
+    border-right: 0.15em solid $color-border;
+  }
+  70% {
+    border-right: 0.15em solid transparent;
+  }
+  80% {
+    border-right: 0.15em solid $color-border;
+  }
+  90% {
+    border-right: 0.15em solid transparent;
+  }
+  100% {
+    border-right: 0.15em solid $color-border;
+  }
+}
+
+.contact__title-animation {
+    overflow: hidden;
+    border-right: none;
+    white-space: nowrap;
+    width: 0;
+    animation: type-writer 3s steps(23, end) forwards, blink 3s infinite;
+  }
+
+
+
+.contact__paragraph{
+    color: white;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    }
+
+.contact__link {
+    text-decoration: none;
+    color: white;
+    
+    &:hover {
+      text-decoration: underline;
+        }
+    }
